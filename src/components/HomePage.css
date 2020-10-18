@@ -27,8 +27,18 @@ body {
     border-radius: 25.5px;
     border: solid 1px #ffffff;
     position: absolute;
+    background-color: transparent;
+    text-align: center;
     left: 11%;
     top: 70%
+}
+
+::placeholder {
+    color: white;
+}
+
+input, select, textarea{
+    color: white;
 }
 
 #submitABusiness {
