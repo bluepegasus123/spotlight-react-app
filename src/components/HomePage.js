@@ -13,8 +13,8 @@ function HomePage() {
                 </header>
 
                 <div id="tagline">
-                    <h1>Find Local Businesses Near You</h1>
                     <input type="text" id="searchTag" placeholder="Try searching for sushi.."/>
+                    <h1>Find Local Businesses Near You</h1>
                 </div>
 
 

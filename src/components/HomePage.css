@@ -26,6 +26,9 @@ body {
     height: 48px;
     border-radius: 25.5px;
     border: solid 1px #ffffff;
+    position: absolute;
+    left: 11%;
+    top: 70%
 }
 
 #submitABusiness {
