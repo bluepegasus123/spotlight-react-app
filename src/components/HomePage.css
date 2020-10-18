@@ -1,0 +1,385 @@
+.Landing-Page {
+    width: 1440px;
+    height: 3693px;
+}
+
+#hero {
+    width: 141px;
+    height: 29px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.81;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+/* duplicates */
+.Rectangle {
+    width: 1440px;
+    height: 800px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
+}
+
+.LogoWhite {
+    width: 155px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.Submit-a-Business {
+    width: 141px;
+    height: 29px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.81;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+.Find-Local-Businesse {
+    width: 655px;
+    height: 160px;
+    font-family: OpenSans;
+    font-size: 64px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -1.35px;
+    color: #ffffff;
+}
+
+/* duplicates */
+.Rectangle {
+    width: 600px;
+    height: 48px;
+    border-radius: 25.5px;
+    border: solid 1px #ffffff;
+}
+
+.Try-searching-for-s {
+    width: 162px;
+    height: 24px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.85;
+    letter-spacing: normal;
+    color: #f8f8f8;
+}
+
+.search-icon-copy {
+    width: 23px;
+    height: 23px;
+    background-color: #ffffff;
+}
+
+.Popular-Categories {
+    width: 126px;
+    height: 18px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Food {
+    width: 32px;
+    height: 16px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Entertainment {
+    width: 90px;
+    height: 16px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Clothing {
+    width: 55px;
+    height: 16px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Printing {
+    width: 50px;
+    height: 16px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+/** MIDDLE SECTION **/
+.Business-Categories {
+    width: 347px;
+    height: 49px;
+    font-family: OpenSans;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+}
+
+/** SLIDERS **/
+.Oval {
+    width: 35px;
+    height: 35px;
+    border: solid 1px #c2c2c2;
+    background-color: #ffffff;
+}
+
+.Food {
+    width: 63px;
+    height: 44px;
+    font-family: OpenSans;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Satisfy-your-craving {
+    width: 129px;
+    height: 24px;
+    font-family: OpenSans;
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.85;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.Why-Shop-Local {
+    width: 273px;
+    height: 49px;
+    font-family: OpenSans;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #32325d;
+}
+
+.Improve-local-econom {
+    width: 317px;
+    height: 32px;
+    font-family: OpenSans;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #fa7100;
+}
+
+.Purchase-at-locally {
+    width: 314px;
+    height: 160px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #44566c;
+}
+
+.Spotlight-Business {
+    width: 515px;
+    height: 49px;
+    font-family: OpenSans;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+}
+.Spotlight-Business .text-style-1 {
+    color: #f7b500;
+}
+
+.Rectangle {
+    width: 1110px;
+    height: 321px;
+    border-radius: 5px;
+    box-shadow: 0 -12px 22px 0 rgba(82, 87, 104, 0.05), 0 12px 22px 0 rgba(82, 87, 104, 0.1);
+    background-color: #ffffff;
+}
+
+.Seattle-WA {
+    width: 74px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8697a8;
+}
+
+.We-opened-our-doors {
+    width: 539px;
+    height: 144px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #32325d;
+}
+
+.--Memo-Murillo {
+    width: 539px;
+    height: 18px;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: #32325d;
+}
+
+.Minority-Owner {
+    width: 539px;
+    height: 18px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #8697a8;
+}
+
+.nd-BG {
+    width: 1439.9px;
+    height: 1349px;
+    background-color: #f6f9fc;
+}
+
+.Owners-We-Support {
+    width: 348px;
+    height: 49px;
+    font-family: OpenSans;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #32325d;
+}
+
+.Women-owned {
+    width: 107px;
+    height: 24px;
+    font-family: OpenSans;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: center;
+    color: #404e5b;
+}
+
+/** Made by bar **/
+.Rectangle {
+    width: 920px;
+    height: 136px;
+    border-radius: 68px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.Made-Using {
+    width: 155px;
+    height: 44px;
+    font-family: OpenSans;
+    font-size: 26px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    color: #44566c;
+}
+
+.Spotllight-2020 {
+    width: 156px;
+    height: 27px;
+    font-family: OpenSans;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #6d7278;
+}
