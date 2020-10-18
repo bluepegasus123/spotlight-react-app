@@ -9,6 +9,12 @@ body {
     padding: 0;
 }
 
+.logoName {
+    position: relative;
+    height: 40px;
+    width:155px;
+}
+
 a:link {
     color: black;
 }
@@ -24,11 +30,13 @@ body {
 
 #hero {
     width: 100%;
-    height: 800px;
+    height: 950px;
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
 }
+
+
 
 #tagline button {
     width: 200px;

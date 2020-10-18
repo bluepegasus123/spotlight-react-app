@@ -11,6 +11,7 @@ import iconMinority from './pictures/IconMinority.png';
 import iconVeteran from './pictures/IconVeteran.png';
 import iconWomen from './pictures/IconWomen.png';
 import heroMap from './pictures/HeroMap.png';
+import logoName from "./pictures/White.png"
 import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -69,6 +70,7 @@ class HomePage extends React.Component {
                 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></link>
                 <div id="hero">
                     <header>
+                    <img class ="logoName" src = {logoName} alt={logoName} />
                         <div id="nav">
                             {/* <Link to "/contact"id="submitABusiness">Submit a Business </Link> */}
                             <Link id = "submitABusiness" to ='/submission' >Submit a Business</Link>
@@ -83,10 +85,10 @@ class HomePage extends React.Component {
                         <button onClick = {this.onClickHandler}>Search Businesses</button>
                         <div id="popular">
                             <p>Popular Categories:</p>
-                            <a href="index.html" className="popularCategory">Food</a>
-                            <a href="index.html" className="popularCategory">Entertainment</a>
-                            <a href="index.html" className="popularCategory">Clothing</a>
-                            <a href="index.html" className="popularCategory">Printing</a>
+                            <a href="/" className="popularCategory">Food</a>
+                            <a href="/" className="popularCategory">Entertainment</a>
+                            <a href="/" className="popularCategory">Clothing</a>
+                            <a href="/" className="popularCategory">Printing</a>
                         </div>
                     </div>
 
