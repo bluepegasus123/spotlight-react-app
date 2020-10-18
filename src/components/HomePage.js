@@ -38,7 +38,17 @@ class HomePage extends React.Component {
 
         fetch("http://localhost:8080/businesses/getAllBusinesses")
         .then(response => response.json())
-        .then(result => this.setState({data: result}, () => console.log(this.state.data)))
+        .then(result => this.setState({data: result}, () => {
+            console.log(this.state.data)
+            this.props.history.push(
+                {
+                    pathname: "/search",
+                    state: {
+                        bus_data: this.state.data,
+                        search_key: this.state.keyword
+                    }
+                })
+        }))
             // const linkParams = {
             //     pathname: "/search",
             //     data: this.state.data
