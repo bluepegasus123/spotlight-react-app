@@ -9,7 +9,7 @@ const AppRouter = () => (
     <Switch>
       <Route path="/" component={HomePage} exact/>
       <Route path="/search" component={SearchPage}/>
-      <Route path="/contact" component={BusinessSubmission}/>
+      <Route path="/submission" component={BusinessSubmission}/>
     </Switch>
   </BrowserRouter>
 );

@@ -30,6 +30,12 @@ body {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
 }
 
+#tagline button {
+    width: 200px;
+    height:50px;
+    /* position: absolute; */
+}
+
 .container {
     position: relative;
 }
@@ -212,6 +218,12 @@ input, select, textarea {
     margin-top: 200px;
     text-align: center;
 }
+
+#spotlight {
+    text-align: center;
+}
+
+
 
 #local h2 {
     font-family: 'Open Sans';
