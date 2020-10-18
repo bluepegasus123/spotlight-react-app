@@ -1,6 +1,10 @@
 import React from 'react';
 //import './App.css';
 import './HomePage.css';
+import foodImage from './pictures/FoodCategory.png';
+import entertainmentImage from './pictures/EntertainmentCategory.png';
+import clothingImage from './pictures/ClothingCategory.png';
+import petImage from './pictures/PetCategory.png';
 
 function HomePage() {
     return (
@@ -13,22 +17,52 @@ function HomePage() {
                 </header>
 
                 <div id="tagline">
-                    <input type="text" id="searchTag" placeholder="Try searching for sushi.."/>
                     <h1>Find Local Businesses Near You</h1>
+                    <input type="text" id="searchTag" placeholder="Try searching for sushi.."/>
+                    <div id="popular">
+                        <p>Popular Categories:</p>
+                        <a href="index.html">Food</a>
+                        <a href="index.html">Entertainment</a>
+                        <a href="index.html">Clothing</a>
+                        <a href="index.html">Printing</a>
+                    </div>
                 </div>
 
-
-                <div id="popular">
-                    <p>Popular Categories:</p>
-                    <a href="index.html">Food</a>
-                    <a href="index.html">Entertainment</a>
-                    <a href="index.html">Clothing</a>
-                    <a href="index.html">Printing</a>
-                </div>
             </div>
 
             <div id="categories">
                 <h2>Business Categories</h2>
+                <div className="row row-centered">
+                    <div className="column">
+                        <div className="container">
+                        <img src={foodImage} alt="Food" id="categoryPhoto"/>
+                        <div className="bottomleft">Food</div>
+                            <div className="bottomleftcaption">Satisfy your cravings</div>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="container">
+                        <img src={entertainmentImage} alt="Entertainment" id="categoryPhoto"/>
+                        <div className="bottomleft">Entertainment</div>
+                            <div className="bottomleftcaption">Take a break</div>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="container">
+                        <img src={clothingImage} alt="Clothing" id="categoryPhoto"/>
+                        <div className="bottomleft">Clothing</div>
+                            <div className="bottomleftcaption">Explore your true style</div>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div className="container">
+                        <img src={petImage} alt="Pet" id="categoryPhoto"/>
+                        <div className="bottomleft">Pets</div>
+                            <div className="bottomleftcaption">Pamper your fur babies</div>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="index.html">Food</a>
 
                 <p>Satisfy your cravings</p>

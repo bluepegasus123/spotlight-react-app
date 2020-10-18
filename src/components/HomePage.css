@@ -13,17 +13,67 @@ a:visited {
 }
 body {
     margin:auto;
-    text-align:center;
+    /*text-align:center;*/
 }
 #hero {
     width: 100%;
     height: 800px;
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
+}
+
+.container {
+    position: relative;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    font-size: x-large;
+    font-family:'Open Sans';
+    font-weight: bolder;
+    color: white;
+}
+
+
+.bottomleftcaption {
+    position: absolute;
+    bottom: 46px;
+    left: 30px;
+    font-size: small;
+    font-family:'Open Sans';
+    color: white;
+}
+
+#popular p {
+    font-family: OpenSans;
+    font-size: 23px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -1.35px;
+    color: #ffffff;
+}
+
+#popular a {
+    width: 655px;
+    height: 160px;
+    font-family: OpenSans;
+    font-size: 23px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -1.35px;
 }
 
 #searchTag {
     width: 600px;
     height: 48px;
+    margin-top: 30px;
     border-radius: 25.5px;
     border: solid 1px #ffffff;
     position: absolute;
@@ -31,6 +81,31 @@ body {
     text-align: center;
     left: 11%;
     top: 70%
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    padding: 5px;
+}
+
+.row {
+    margin-top: 40px;
+    margin-left: 14%
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#categoryPhoto {
+    width: 254px;
+    height: 352px;
+    object-fit: contain;
+    /*box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);*/
 }
 
 ::placeholder {
@@ -53,10 +128,11 @@ input, select, textarea{
     letter-spacing: normal;
     text-align: right;
     color: #ffffff;
+    text-decoration: none;
 }
 
 #nav{
-    width: 141px;
+    width: 250px;
     height: 29px;
     margin: 29px 1129px;
     font-family: OpenSans;
@@ -68,6 +144,7 @@ input, select, textarea{
     letter-spacing: normal;
     text-align: right;
     color: #ffffff;
+    /*padding-top: 20px;*/
 }
 
 #hero h1{
@@ -84,6 +161,18 @@ input, select, textarea{
     color: #ffffff;
 }
 
+#categories h2 {
+    font-family: OpenSans;
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+    margin-top: 200px;
+    text-align: center;
+}
 
 
 /*.HomePage {*/
