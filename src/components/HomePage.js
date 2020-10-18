@@ -4,10 +4,10 @@ import './HomePage.css';
 
 function HomePage() {
     return (
-        <div> className="HomePage">
-        <head>
+        <div className="HomePage">
+        {/* <head>
             <title>Spotlight</title>
-        </head>
+        </head> */}
 
         <body>
         <div id="hero">
@@ -21,21 +21,21 @@ function HomePage() {
                 <h1>Find Local Businesses Near You</h1>
             </div>
 
-            <div id="search">
+            {/* <div id="search">
                 <p>Try searching for "sushi"</p>
-            </div>
+            </div> */}
 
-            <div id="popular">
+            {/* <div id="popular">
                 <p>Popular Categories:</p>
                 <a href="index.html">Food</a>
                 <a href="index.html">Entertainment</a>
                 <a href="index.html">Clothing</a>
                 <a href="index.html">Printing</a>
-            </div>
+            </div> */}
 
         </div>
 
-        <div id="categories">
+        {/* <div id="categories">
             <h2>Business Categories</h2>
             <a href="index.html">Food</a>
 
@@ -49,9 +49,9 @@ function HomePage() {
 
             <a href="index.html">Pets</a>
             <p>Pamper your fur babies</p>
-        </div>
+        </div> */}
 
-        <div id="local">
+        {/* <div id="local">
             <h2>Business Categories</h2>
 
             <h3>Improve Local Economy</h3>
@@ -66,9 +66,9 @@ function HomePage() {
             <p>When shopping local, you get to connect directly with shop-owners who are more likely to give better
                 service.</p>
 
-        </div>
+        </div> */}
 
-        <div id="spotlight">
+        {/* <div id="spotlight">
             <h3>Spotlight:</h3>
             <h3>Business of the Day</h3>
 
@@ -81,15 +81,15 @@ function HomePage() {
             <p>-Memo Murillo</p>
             <p>Minority-Owner</p>
 
-        </div>
+        </div> */}
 
-        <div id="owners">
+        {/* <div id="owners">
             <h2>Owners We Support</h2>
             <p>Women-owned</p>
             <p>Minority-owned</p>
             <p>Veteran-owned</p>
             <p>Family-owned</p>
-        </div>
+        </div> */}
 
         <div id="made">
             <h3>Made Using:</h3>

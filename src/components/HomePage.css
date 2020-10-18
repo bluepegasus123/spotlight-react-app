@@ -1,4 +1,4 @@
-.Landing-Page {
+.HomePage {
     width: 1440px;
     height: 3693px;
 }
@@ -15,7 +15,16 @@
     letter-spacing: normal;
     text-align: right;
     text-decoration-color: #f7b500;
-    color: #ffffff;
+    /* color: #ffffff; */
+}
+
+#nav {
+    position: relative;
+    right: -1000px;
+}
+
+#tagline {
+    text-align: center;
 }
 
 /* duplicates */
