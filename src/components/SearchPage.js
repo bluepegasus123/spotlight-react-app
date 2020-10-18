@@ -7,6 +7,9 @@ import site from './pictures/Site.png'
 import mail from './pictures/Mail.png'
 import GoogleMapReact from 'google-map-react';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
 const resultData = [
     {
         "name": "Fat Ducks Deli and Bakery",
@@ -529,8 +532,13 @@ class SearchPage extends Component {
     createSelectedBusinessDiv() {
         const {selectedBusiness} = this.state;
         return <div className='column-right'>
-            {/* TODO: fix*/}
-            <img className='s-image' src="https://images.japancentre.com/recipes/pics/18/main/makisushi.jpg?1557308201"  alt=""/>
+            <Carousel className='s-carousel' showStatus={false}>
+                <img src={selectedBusiness.profile_picture} alt=''/>
+                {selectedBusiness.remaining_pictures.map((picture)=> {
+                    return <img src={picture} alt=''/>
+                })}
+            </Carousel>
+
             <p className='s-name'>{selectedBusiness.name}</p>
             <div className='s-address-location-div'>
                 <img className='s-location-pin' src={location_pin}  alt=""/>

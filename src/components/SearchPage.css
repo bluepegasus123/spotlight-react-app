@@ -195,7 +195,7 @@
 
 /*for selected business*/
 
-.s-image {
+.s-carousel {
     width: 90%;
 }
 
@@ -317,4 +317,8 @@
     letter-spacing: normal;
     text-align: right;
     color: #f7b500 !important;
+}
+
+.carousel .thumb.selected, .carousel .thumb:hover {
+    border: 3px solid #f7b500 !important;
 }
