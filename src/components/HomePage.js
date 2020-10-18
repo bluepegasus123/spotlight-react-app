@@ -70,7 +70,7 @@ class HomePage extends React.Component {
                 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></link>
                 <div id="hero">
                     <header>
-                    <img class ="logoName" src = {logoName} alt={logoName} />
+                    <img className ="logoName" src = {logoName} alt={logoName} />
                         <div id="nav">
                             {/* <Link to "/contact"id="submitABusiness">Submit a Business </Link> */}
                             <Link id = "submitABusiness" to ='/submission' >Submit a Business</Link>
