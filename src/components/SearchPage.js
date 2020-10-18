@@ -583,12 +583,37 @@ class SearchPage extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            items: this.props.location.state ? this.props.location.state.bus_data : resultData,
-            searchKey: this.props.location.state ? (`Showing Results for ${this.props.location.state.search_key}`) : "",
-            selectedBusiness: this.props.location.state ? this.props.location.state.bus_data[0] : resultData[0],
-            isLoaded: true,
-        })
+        if (this.props.location.state && this.props.location.state.bus_data?.length > 0) {
+            this.setState({
+                items: this.props.location.state.bus_data,
+                searchKey: `Showing Results for "${this.props.location.state.search_key}"`,
+                selectedBusiness: this.props.location.state.bus_data[0],
+                isLoaded: true,
+            })
+        } else {
+            fetch("http://localhost:8080//businesses/getAllBusinesses")
+                .then(res => res.json())
+                .then(
+                    (result) => {
+                        this.setState({
+                            isLoaded: true,
+                            items: result,
+                            selectedBusiness: result[0],
+                            // if search key rendered no results, show all businesses. If user jumps to search page, searchKey empty string
+                            searchKey: this.props.location.state?.state?.searchKey ? `Sorry, no businesses found for ${this.props.location.state?.state?.searchKey}, here are all the businesses` : '',
+                        });
+                    },
+                    // Note: it's important to handle errors here
+                    // instead of a catch() block so that we don't swallow
+                    // exceptions from actual bugs in components.
+                    (error) => {
+                        this.setState({
+                            isLoaded: true,
+                            error
+                        });
+                    }
+                )
+        }
     }
 
     render() {
