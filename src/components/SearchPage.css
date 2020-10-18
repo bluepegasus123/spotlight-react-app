@@ -45,6 +45,7 @@
     width: 155px;
     height: 40px;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .submit {
@@ -110,6 +111,17 @@
     align-content: stretch;
     /*align-items: center;*/
     text-align: left;
+    cursor: pointer;
+}
+
+.searchResult:hover {
+    background-color: #eeeaea;
+}
+
+.searchResult:active {
+    background-color: #eeeaea;
+    width: 94%;
+    height: 11.9vh;
 }
 
 .business-title {
@@ -245,4 +257,45 @@
     line-height: 1.71;
     letter-spacing: normal;
     color: #32325d;
+}
+
+.mapId {
+    height: 40vh;
+    width: 100%;
+}
+
+.s-row {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+.s-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.s-icon-img {
+    width: 45px;
+    height: 45px;
+}
+
+.s-img-label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.81;
+    letter-spacing: normal;
+    text-align: right;
+    color: #f7b500 !important;
 }
