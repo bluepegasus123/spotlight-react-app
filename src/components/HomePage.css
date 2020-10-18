@@ -1,22 +1,27 @@
 
 html {
-    font-family:'Open Sans';
+    font-family: 'Open Sans';
 }
+
 body {
-    font-family:'Open Sans';
-    margin:0;
-    padding:0;
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
 }
+
 a:link {
-    color:black;
+    color: black;
 }
+
 a:visited {
-    color:black;
+    color: black;
 }
+
 body {
-    margin:auto;
+    margin: auto;
     /*text-align:center;*/
 }
+
 #hero {
     width: 100%;
     height: 800px;
@@ -40,40 +45,67 @@ body {
     bottom: 60px;
     left: 30px;
     font-size: x-large;
-    font-family:'Open Sans';
+    font-family: 'Open Sans';
     font-weight: bolder;
     color: white;
 }
 
+.caption {
+    margin-top: 30px;
+}
+
+.headerMap {
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+
+.row2 {
+    margin-top: 100px;
+    margin-left: 18%
+}
+
+.row2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 .bottomleftcaption {
     position: absolute;
     bottom: 46px;
     left: 30px;
     font-size: small;
-    font-family:'Open Sans';
+    font-family: 'Open Sans';
     color: white;
 }
 
 #popular p {
     font-family: 'Open Sans';
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 18px;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.25;
     letter-spacing: -1.35px;
     color: #ffffff;
+    font-weight: bolder;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#popular {
+    margin-left: 14%
 }
 
 #popular a {
     width: 655px;
     height: 160px;
     font-family: 'Open Sans';
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 18px;
     font-stretch: normal;
     font-style: normal;
+    font-weight: lighter;
+    color: white;
     line-height: 1.25;
     letter-spacing: -1.35px;
 }
@@ -88,7 +120,7 @@ body {
     background-color: transparent;
     text-align: center;
     left: 11%;
-    top: 70%
+    top: 80%
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -116,11 +148,18 @@ body {
     /*box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);*/
 }
 
+#ownersPhoto {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 150px;
+}
+
 ::placeholder {
     color: white;
 }
 
-input, select, textarea{
+input, select, textarea {
     color: white;
 }
 
@@ -139,7 +178,7 @@ input, select, textarea{
     text-decoration: none;
 }
 
-#nav{
+#nav {
     width: 250px;
     height: 29px;
     margin: 29px 1129px;
@@ -152,12 +191,10 @@ input, select, textarea{
     letter-spacing: normal;
     text-align: right;
     color: #ffffff;
-    /*padding-top: 20px;*/
+    padding-top: 20px;
 }
 
-#hero h1{
-    width: 655px;
-    height: 160px;
+#hero h1 {
     margin: 255px 165px;
     font-family: 'Open Sans';
     font-size: 64px;
@@ -188,6 +225,42 @@ input, select, textarea{
 
 
 
+#local h2 {
+    font-family: 'Open Sans';
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+    margin-top: 200px;
+    text-align: center;
+}
+
+#owners h2 {
+    font-family: 'Open Sans';
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.column p {
+    width: 300px;
+    margin-right: 40px;
+    color: grey;
+}
+
+.column h3 {
+    color: orangered;
+    font-weight: bolder;
+}
 
 /*.HomePage {*/
 /*    width: 1440px;*/
@@ -551,13 +624,16 @@ input, select, textarea{
 
 /*!** Made by bar **!*/
 .Rectangle {
-  position: relative;
-  width: 920px;
-  height: 136px;
-  border-radius: 68px;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  right: -300px;
+    position: relative;
+    width: 920px;
+    height: 136px;
+    border-radius: 68px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    right: -300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
 }
 
 .Made-Using {
@@ -570,16 +646,35 @@ input, select, textarea{
     font-style: normal;
     line-height: 1.69;
     letter-spacing: normal;
+    vertical-align: middle;
     color: #44566c;
-  }
+    display: inline-block;
+    padding-left: 80px;
+    padding-top: 30px;
+}
 
-  .Bitmap {
+.popularCategory {
+    text-decoration: none;
+    padding-right: 30px;
+    font-weight: lighter;
+}
+
+.nd-BG {
+    width: 1439.9px;
+    height: 1349px;
+    background-color: #f6f9fc;
+}
+
+.Bitmap {
     width: 68px;
+    padding-top: 20px;
     height: 66px;
     object-fit: contain;
-  }
+    align: center;
+    vertical-align: middle;
+}
 
-  .Spotllight-2020 {
+.Spotllight-2020 {
     width: 156px;
     height: 27px;
     font-family: 'Open Sans';
@@ -592,7 +687,8 @@ input, select, textarea{
     right: -680px;
     position: relative;
     color: #6d7278;
-  }
+    margin-top: 300px;
+}
 
 
 /*.Made-Using {*/
