@@ -1,3 +1,7 @@
+CSS:
+
+
+
 html {
     font-family:'Open Sans';
 }
@@ -536,13 +540,50 @@ input, select, textarea{
 /*}*/
 
 /*!** Made by bar **!*/
-/*.Rectangle {*/
-/*    width: 920px;*/
-/*    height: 136px;*/
-/*    border-radius: 68px;*/
-/*    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);*/
-/*    background-color: #ffffff;*/
-/*}*/
+.Rectangle {
+  position: relative;
+  width: 920px;
+  height: 136px;
+  border-radius: 68px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  right: -300px;
+}
+
+.Made-Using {
+    width: 300px;
+    height: 44px;
+    font-family: OpenSans;
+    font-size: 26px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.69;
+    letter-spacing: normal;
+    color: #44566c;
+  }
+
+  .Bitmap {
+    width: 68px;
+    height: 66px;
+    object-fit: contain;
+  }
+
+  .Spotllight-2020 {
+    width: 156px;
+    height: 27px;
+    font-family: OpenSans;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    right: -680px;
+    position: relative;
+    color: #6d7278;
+  }
+
 
 /*.Made-Using {*/
 /*    width: 155px;*/

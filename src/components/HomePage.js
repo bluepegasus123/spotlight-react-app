@@ -1,6 +1,7 @@
 import React from 'react';
 //import './App.css';
 import './HomePage.css';
+import diamondImg from '../sketchLogo.png';
 import foodImage from './pictures/FoodCategory.png';
 import entertainmentImage from './pictures/EntertainmentCategory.png';
 import clothingImage from './pictures/ClothingCategory.png';
@@ -118,14 +119,18 @@ function HomePage() {
                 <p>Family-owned</p>
             </div>
 
-            <div id="made">
-                <h3>Made Using:</h3>
+            <div class="Rectangle">
+                <div class = "Made-Using">
+                    Made Using:
+
+                    <img src = {diamondImg} alt = {diamondImg} class = "Bitmap"/>
+                </div>
             </div>
 
 
-            <footer>
-                <p>©Spotlight 2020</p>
-            </footer>
+            <div class = "Spotllight-2020">
+                ©Spotlight 2020
+            </div>
         </div>
 
     );
