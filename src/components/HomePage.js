@@ -1,7 +1,7 @@
 import React from 'react';
 //import './App.css';
 import './HomePage.css';
-
+import diamondImg from '../sketchLogo.png'
 function HomePage() {
     return (
         <div>
@@ -84,14 +84,18 @@ function HomePage() {
                 <p>Family-owned</p>
             </div>
 
-            <div id="made">
-                <h3>Made Using:</h3>
+            <div class="Rectangle">
+                <div class = "Made-Using">
+                    Made Using:
+                
+                    <img src = {diamondImg} alt = {diamondImg} class = "Bitmap"/>
+                </div>
             </div>
 
 
-            <footer>
-                <p>©Spotlight 2020</p>
-            </footer>
+            <div class = "Spotllight-2020">
+                ©Spotlight 2020
+            </div>
         </div>
 
     );
