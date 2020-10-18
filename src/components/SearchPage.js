@@ -492,14 +492,6 @@ const resultData = [
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class SearchPage extends Component {
-    static defaultProps = {
-        center: {
-            lat: 47.6628,
-            lng: -122.3139
-        },
-        zoom: 11
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -528,7 +520,6 @@ class SearchPage extends Component {
     }
 
     changeSelectedBusiness(business) {
-        console.log("HERE"+business.name);
         this.setState(prevState => ({
             ...prevState,
             selectedBusiness: business,
@@ -547,25 +538,31 @@ class SearchPage extends Component {
             </div>
             <div className='s-row'>
                 <div className='s-col'>
-                    <img className='s-icon-img' src={call} alt=''/>
+                    <a href={"tel:" + selectedBusiness.phone_number}>
+                        <img className='s-icon-img' src={call} alt=''/>
+                    </a>
                     <p className='s-icon-label'>Call</p>
                 </div>
                 <div className='s-col'>
-                    <img className='s-icon-img' src={site} alt=''/>
+                    <a href={selectedBusiness.site} target="_blank">
+                        <img className='s-icon-img' src={site} alt=''/>
+                    </a>
                     <p className='s-icon-label'>Visit Website</p>
                 </div>
                 <div className='s-col'>
-                    <img className='s-icon-img' src={mail} alt=''/>
+                    <a href={"mailto: " + selectedBusiness.owner_email}>
+                        <img className='s-icon-img' src={mail} alt=''/>
+                    </a>
                     <p className='s-icon-label'>Email</p>
                 </div>
             </div>
             <p className='s-story-title'>Our Story</p>
             <p className='s-story'>{selectedBusiness.story}</p>
-            <div class='mapId'>
+            <div className='mapId'>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyAi6Ve6OAZ73VpsciDfNRTg5sBp3XJoL84'}}
-                    defaultCenter={this.props.center} //TODO: set center same as selectedBusiness.lat, lon
-                    defaultZoom={this.props.zoom}
+                    defaultCenter={{lat: 47.6628, lng: -122.3139}} //TODO: set center same as selectedBusiness.lat, lon
+                    defaultZoom={11}
                 >
                     <AnyReactComponent
                         lat={47.6628}
@@ -584,26 +581,6 @@ class SearchPage extends Component {
             selectedBusiness: this.props.location.state ? this.props.location.state.bus_data[0] : resultData[0],
             isLoaded: true,
         })
-        // fetch("http://localhost:8080//businesses/getAllBusinesses")
-        //     .then(res => res.json())
-        //     .then(
-        //         (result) => {
-        //             this.setState({
-        //                 isLoaded: true,
-        //                 items: result,
-        //                 selectedBusiness: result[0]
-        //             });
-        //         },
-        //         // Note: it's important to handle errors here
-        //         // instead of a catch() block so that we don't swallow
-        //         // exceptions from actual bugs in components.
-        //         (error) => {
-        //             this.setState({
-        //                 isLoaded: true,
-        //                 error
-        //             });
-        //         }
-        //     )
     }
 
     render() {
@@ -633,18 +610,6 @@ class SearchPage extends Component {
                     })}
                 </div>
                 {this.createSelectedBusinessDiv()}
-                {/*<div className='column-right'>*/}
-                {/*    /!* TODO: fix*!/*/}
-                {/*    <img className='s-image' src="https://images.japancentre.com/recipes/pics/18/main/makisushi.jpg?1557308201"  alt=""/>*/}
-                {/*    <p className='s-name'>{this.state.selectedBusiness.name}</p>*/}
-                {/*    <div className='s-address-location-div'>*/}
-                {/*        <img className='s-location-pin' src={location_pin}  alt=""/>*/}
-                {/*        <p className='s-address'>{this.state.selectedBusiness.address}</p>*/}
-                {/*    </div>*/}
-                {/*    /!*TODO add visit site, share, call*!/*/}
-                {/*    <p className='s-story-title'>Our Story</p>*/}
-                {/*    <p className='s-story'>{this.state.selectedBusiness.story}</p>*/}
-                {/*</div>*/}
             </div>
         </div>
     }
