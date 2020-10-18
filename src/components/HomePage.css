@@ -1,11 +1,9 @@
 
-
-
-
 html {
     font-family:'Open Sans';
 }
 body {
+    font-family:'Open Sans';
     margin:0;
     padding:0;
 }
@@ -17,28 +15,113 @@ a:visited {
 }
 body {
     margin:auto;
-    text-align:center;
+    /*text-align:center;*/
 }
 #hero {
     width: 100%;
     height: 800px;
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
+}
+
+.container {
+    position: relative;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    font-size: x-large;
+    font-family:'Open Sans';
+    font-weight: bolder;
+    color: white;
+}
+
+
+.bottomleftcaption {
+    position: absolute;
+    bottom: 46px;
+    left: 30px;
+    font-size: small;
+    font-family:'Open Sans';
+    color: white;
+}
+
+#popular p {
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -1.35px;
+    color: #ffffff;
+}
+
+#popular a {
+    width: 655px;
+    height: 160px;
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: -1.35px;
 }
 
 #searchTag {
     width: 600px;
     height: 48px;
+    margin-top: 30px;
     border-radius: 25.5px;
     border: solid 1px #ffffff;
     position: absolute;
+    background-color: transparent;
+    text-align: center;
     left: 11%;
     top: 70%
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    padding: 5px;
+}
+
+.row {
+    margin-top: 40px;
+    margin-left: 14%
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#categoryPhoto {
+    width: 254px;
+    height: 352px;
+    object-fit: contain;
+    /*box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);*/
+}
+
+::placeholder {
+    color: white;
+}
+
+input, select, textarea{
+    color: white;
 }
 
 #submitABusiness {
     width: 141px;
     height: 29px;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 600;
     font-stretch: normal;
@@ -47,13 +130,14 @@ body {
     letter-spacing: normal;
     text-align: right;
     color: #ffffff;
+    text-decoration: none;
 }
 
 #nav{
-    width: 141px;
+    width: 250px;
     height: 29px;
     margin: 29px 1129px;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 600;
     font-stretch: normal;
@@ -62,13 +146,14 @@ body {
     letter-spacing: normal;
     text-align: right;
     color: #ffffff;
+    /*padding-top: 20px;*/
 }
 
 #hero h1{
     width: 655px;
     height: 160px;
     margin: 255px 165px;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
     font-size: 64px;
     font-weight: 600;
     font-stretch: normal;
@@ -78,6 +163,18 @@ body {
     color: #ffffff;
 }
 
+#categories h2 {
+    font-family: 'Open Sans';
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #32325d;
+    margin-top: 200px;
+    text-align: center;
+}
 
 
 /*.HomePage {*/
@@ -88,7 +185,7 @@ body {
 /*#hero {*/
 /*    width: 141px;*/
 /*    height: 29px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 16px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -125,7 +222,7 @@ body {
 /*.Submit-a-Business {*/
 /*    width: 141px;*/
 /*    height: 29px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 16px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -139,7 +236,7 @@ body {
 /*.Find-Local-Businesse {*/
 /*    width: 655px;*/
 /*    height: 160px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 64px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -160,7 +257,7 @@ body {
 /*.Try-searching-for-s {*/
 /*    width: 162px;*/
 /*    height: 24px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -179,7 +276,7 @@ body {
 /*.Popular-Categories {*/
 /*    width: 126px;*/
 /*    height: 18px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -192,7 +289,7 @@ body {
 /*.Food {*/
 /*    width: 32px;*/
 /*    height: 16px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -205,7 +302,7 @@ body {
 /*.Entertainment {*/
 /*    width: 90px;*/
 /*    height: 16px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -218,7 +315,7 @@ body {
 /*.Clothing {*/
 /*    width: 55px;*/
 /*    height: 16px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -231,7 +328,7 @@ body {
 /*.Printing {*/
 /*    width: 50px;*/
 /*    height: 16px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -245,7 +342,7 @@ body {
 /*.Business-Categories {*/
 /*    width: 347px;*/
 /*    height: 49px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 36px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -266,7 +363,7 @@ body {
 /*.Food {*/
 /*    width: 63px;*/
 /*    height: 44px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 26px;*/
 /*    font-weight: bold;*/
 /*    font-stretch: normal;*/
@@ -279,7 +376,7 @@ body {
 /*.Satisfy-your-craving {*/
 /*    width: 129px;*/
 /*    height: 24px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 13px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -292,7 +389,7 @@ body {
 /*.Why-Shop-Local {*/
 /*    width: 273px;*/
 /*    height: 49px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 36px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -306,7 +403,7 @@ body {
 /*.Improve-local-econom {*/
 /*    width: 317px;*/
 /*    height: 32px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 24px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -319,7 +416,7 @@ body {
 /*.Purchase-at-locally {*/
 /*    width: 314px;*/
 /*    height: 160px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 16px;*/
 /*    font-weight: 300;*/
 /*    font-stretch: normal;*/
@@ -333,7 +430,7 @@ body {
 /*.Spotlight-Business {*/
 /*    width: 515px;*/
 /*    height: 49px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 36px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -357,7 +454,7 @@ body {
 /*.Seattle-WA {*/
 /*    width: 74px;*/
 /*    height: 19px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 14px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -370,7 +467,7 @@ body {
 /*.We-opened-our-doors {*/
 /*    width: 539px;*/
 /*    height: 144px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 14px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -383,7 +480,7 @@ body {
 /*.--Memo-Murillo {*/
 /*    width: 539px;*/
 /*    height: 18px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 16px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -396,7 +493,7 @@ body {
 /*.Minority-Owner {*/
 /*    width: 539px;*/
 /*    height: 18px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 14px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -415,7 +512,7 @@ body {
 /*.Owners-We-Support {*/
 /*    width: 348px;*/
 /*    height: 49px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 36px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -429,7 +526,7 @@ body {
 /*.Women-owned {*/
 /*    width: 107px;*/
 /*    height: 24px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 15px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
@@ -452,9 +549,9 @@ body {
 }
 
 .Made-Using {
-    width: 300px;
+    width: 350px;
     height: 44px;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
     font-size: 26px;
     font-weight: 600;
     font-stretch: normal;
@@ -473,7 +570,7 @@ body {
   .Spotllight-2020 {
     width: 156px;
     height: 27px;
-    font-family: OpenSans;
+    font-family: 'Open Sans';
     font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
@@ -489,7 +586,7 @@ body {
 /*.Made-Using {*/
 /*    width: 155px;*/
 /*    height: 44px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 26px;*/
 /*    font-weight: 600;*/
 /*    font-stretch: normal;*/
@@ -502,7 +599,7 @@ body {
 /*.Spotllight-2020 {*/
 /*    width: 156px;*/
 /*    height: 27px;*/
-/*    font-family: OpenSans;*/
+/*    font-family: 'Open Sans';*/
 /*    font-size: 20px;*/
 /*    font-weight: normal;*/
 /*    font-stretch: normal;*/
