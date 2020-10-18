@@ -6,15 +6,18 @@ import foodImage from './pictures/FoodCategory.png';
 import entertainmentImage from './pictures/EntertainmentCategory.png';
 import clothingImage from './pictures/ClothingCategory.png';
 import petImage from './pictures/PetCategory.png';
+import {Link} from 'react-router-dom'
 
 class HomePage extends React.Component{
     constructor(props) {
         super(props)
         this.state = {
             keyword: "",
-            tags: []
+            tags: [],
+            data: []
         }
-        this.searchBarChangeHandler = this.searchBarChangeHandler.bind(this)
+        this.searchBarChangeHandler = this.searchBarChangeHandler.bind(this);
+        this.onClickHandler = this.onClickHandler.bind(this);
     }
     searchBarChangeHandler(event) {
         
@@ -24,6 +27,26 @@ class HomePage extends React.Component{
         
     }
 
+    onClickHandler() {
+
+        
+        fetch("http://localhost:8080/businesses/getAllBusinesses")
+        .then(response => response.json())
+        .then(result => this.setState({data: result}, () => console.log(this.state.data)))
+            // const linkParams = {
+            //     pathname: "/search",
+            //     data: this.state.data
+            // }
+            
+        
+        
+        
+        // fetch("http://localhost:8080/businesses/searchBusinesses" + new URLSearchParams({
+        //     searchKey: this.state.keyword,
+        //     tags: this.state.tags
+        // }))
+    }
+
     render() {
         return (
             <div>
@@ -31,13 +54,16 @@ class HomePage extends React.Component{
                 <div id="hero">
                     <header>
                         <div id="nav">
-                            <a href="index.html" id="submitABusiness">Submit a Business</a>
+                            {/* <Link to "/contact"id="submitABusiness">Submit a Business </Link> */}
+                            <Link id = "submitABusiness" to ='/submission' >Submit a Business</Link>
+
                         </div>
                     </header>
     
                     <div id="tagline">
                         <h1>Find Local Businesses Near You</h1>
                         <input onChange = {this.searchBarChangeHandler} type="text" id="searchTag" placeholder="Try searching for sushi.."/>
+                        <button onClick = {this.onClickHandler}>Search Businesses</button>
                         <div id="popular">
                             <p>Popular Categories:</p>
                             <a href="index.html">Food</a>
@@ -115,10 +141,9 @@ class HomePage extends React.Component{
                 </div>
     
                 <div id="spotlight">
-                    <h3>Spotlight:</h3>
-                    <h3>Business of the Day</h3>
-    
-                    <p>Seattle,WA</p>
+                    <h1>Spotlight: Business of the Day</h1>
+                    <img src={petImage} alt="Pet" id="categoryPhoto"/>
+                    <h3>Seattle,WA</h3>
                     <p>“We opened our doors in the city of Seattle in February of 2008. We use all natural ingredients in
                         our food and make our own secret recipe hot sauces for your dinning delight. Enjoy our complete
                         Breakfast, Lunch, and Dinner Menus 24 hours a day. Don’t Forget to ask about our complete kid’s
