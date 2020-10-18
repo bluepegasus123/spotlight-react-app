@@ -1,0 +1,83 @@
+html {
+    font-family: 'Open Sans';
+}
+
+body {
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    
+}
+
+.whiteLogo {
+    padding-top: 50px;
+}
+
+.Submission {
+    height: 1000px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(61deg, #fa7000, #f7b500);
+}
+
+.Submission h1 {
+    text-align: center;
+}
+
+.inputName {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+.inputPhone {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+
+.inputOwner {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+.inputAddress {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+
+.inputEmail {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+.inputWebsite {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+
+.inputDescription {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+.inputPicture {
+    font-weight: bold;
+    color: black;
+    height:25px;
+}
+
+.inputLabel {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.formButton {
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.outputMessage {
+    color: white;
+}
