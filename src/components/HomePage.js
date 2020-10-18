@@ -12,6 +12,8 @@ import iconVeteran from './pictures/IconVeteran.png';
 import iconWomen from './pictures/IconWomen.png';
 import heroMap from './pictures/HeroMap.png';
 import logoName from "./pictures/White.png"
+import search from "./pictures/search.png"
+import location from "./pictures/location_pin.png"
 import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -35,33 +37,25 @@ class HomePage extends React.Component {
     }
 
     onClickHandler() {
-
-
         fetch("http://localhost:8080/businesses/getAllBusinesses")
-        .then(response => response.json())
-        .then(result => this.setState({data: result}, () => {
-            console.log(this.state.data)
-            this.props.history.push(
-                {
-                    pathname: "/search",
-                    state: {
-                        bus_data: this.state.data,
-                        search_key: this.state.keyword
-                    }
-                })
-        }))
-            // const linkParams = {
-            //     pathname: "/search",
-            //     data: this.state.data
-            // }
+            .then(response => response.json())
+            .then(result => this.setState({data: result}, () => {
+                console.log(this.state.data)
+                this.props.history.push(
+                    {
+                        pathname: "/search",
+                        state: {
+                            bus_data: this.state.data,
+                            search_key: this.state.keyword
+                        }
+                    })
+            }))
+    }
 
-
-
-
-        // fetch("http://localhost:8080/businesses/searchBusinesses" + new URLSearchParams({
-        //     searchKey: this.state.keyword,
-        //     tags: this.state.tags
-        // }))
+    handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+            return this.onClickHandler();
+        }
     }
 
     render() {
@@ -69,27 +63,44 @@ class HomePage extends React.Component {
             <div>
                 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'></link>
                 <div id="hero">
-                    <header>
+                    <header className="header">
                     <img className ="logoName" src = {logoName} alt={logoName} />
-                        <div id="nav">
+                        {/*<div id="nav">*/}
                             {/* <Link to "/contact"id="submitABusiness">Submit a Business </Link> */}
                             <Link id = "submitABusiness" to ='/submission' >Submit a Business</Link>
 
-                        </div>
+                        {/*</div>*/}
                     </header>
 
                     <div id="tagline">
-                        <img src={heroMap} alt="Map" className="headerMap"/>
-                        <h1>Find Local Businesses <br/> Near You</h1>
-                        <input onChange = {this.searchBarChangeHandler} type="text" id="searchTag" placeholder="Try searching for sushi.."/>
-                        <button onClick = {this.onClickHandler}>Search Businesses</button>
-                        <div id="popular">
-                            <p>Popular Categories:</p>
-                            <a href="/" className="popularCategory">Food</a>
-                            <a href="/" className="popularCategory">Entertainment</a>
-                            <a href="/" className="popularCategory">Clothing</a>
-                            <a href="/" className="popularCategory">Printing</a>
+                        <div className='left-tag'>
+                            <p className='tag-title'>Find Local Businesses <br/> Near You</p>
+                            <div className='form'>
+                                <input onKeyPress = {this.handleKeyPress} onChange = {this.searchBarChangeHandler} type="text" id="searchTag" placeholder='Try searching for "sushi"'/>
+                                <img className='form-img'src={search} alt='' onClick = {this.onClickHandler} />
+                            </div>
+                            <div id="popular">
+                                <p>Popular Categories:</p>
+                                <a href="/" className="popularCategory">Food</a>
+                                <a href="/" className="popularCategory">Entertainment</a>
+                                <a href="/" className="popularCategory">Clothing</a>
+                                <a href="/" className="popularCategory">Printing</a>
+                            </div>
                         </div>
+                        <div className='right-tag'>
+                            <img src={heroMap} alt="Map" className="headerMap"/>
+                        </div>
+                        {/*<img src={heroMap} alt="Map" className="headerMap"/>*/}
+                        {/*<h1>Find Local Businesses <br/> Near You</h1>*/}
+                        {/*<input onChange = {this.searchBarChangeHandler} type="text" id="searchTag" placeholder="Try searching for sushi.."/>*/}
+                        {/*<button onClick = {this.onClickHandler}>Search Businesses</button>*/}
+                        {/*<div id="popular">*/}
+                        {/*    <p>Popular Categories:</p>*/}
+                        {/*    <a href="/" className="popularCategory">Food</a>*/}
+                        {/*    <a href="/" className="popularCategory">Entertainment</a>*/}
+                        {/*    <a href="/" className="popularCategory">Clothing</a>*/}
+                        {/*    <a href="/" className="popularCategory">Printing</a>*/}
+                        {/*</div>*/}
                     </div>
 
                 </div>
@@ -160,17 +171,23 @@ class HomePage extends React.Component {
                 <div className="nd-BG">
 
                     <div id="spotlight">
-                        <h1>Spotlight: Business of the Day</h1>
-                        <img src={petImage} alt="Pet" id="categoryPhoto"/>
-                        <h3>Seattle,WA</h3>
-                        <p>“We opened our doors in the city of Seattle in February of 2008. We use all natural ingredients in
-                            our food and make our own secret recipe hot sauces for your dinning delight. Enjoy our complete
-                            Breakfast, Lunch, and Dinner Menus 24 hours a day. Don’t Forget to ask about our complete kid’s
-                            menu. Come down anytime to enjoy the best of the Northwest’s Authentic Mexican cuisine at Memo’s
-                            Mexican Food Restaurant.”</p>
-                        <p>-Memo Murillo</p>
-                        <p>Minority-Owner</p>
-
+                        <h1 className='spotlight-header'>Spotlight: Business of the Day</h1>
+                        <div className="spotlight-content">
+                            <img className="spotlight-logo" src={"https://user-images.githubusercontent.com/49849754/96366552-1d57dd80-10fd-11eb-9912-2147e65ac3c0.jpg"} alt="Pet"/>
+                            <div className = "spotlight-column">
+                                <div className= "spotlight-location">
+                                    <img className='spotlight-location-img' src={location} alt=""/>
+                                    <p className='spotlight-location-title'>Seattle,WA</p>
+                                </div>
+                                <p className="spotlight-description">“We opened our doors in the city of Seattle in February of 2008. We use all natural ingredients in
+                                    our food and make our own secret recipe hot sauces for your dinning delight. Enjoy our complete
+                                    Breakfast, Lunch, and Dinner Menus 24 hours a day. Don’t Forget to ask about our complete kid’s
+                                    menu. Come down anytime to enjoy the best of the Northwest’s Authentic Mexican cuisine at Memo’s
+                                    Mexican Food Restaurant.”</p>
+                                <p className="spotlight-owner">- Memo Murillo</p>
+                                <p className="spotlight-owner-title">Minority-Owner</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="owners">
