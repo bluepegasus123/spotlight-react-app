@@ -83,10 +83,10 @@ class HomePage extends React.Component {
                         <button onClick = {this.onClickHandler}>Search Businesses</button>
                         <div id="popular">
                             <p>Popular Categories:</p>
-                            <a href="index.html" class="popularCategory">Food</a>
-                            <a href="index.html" class="popularCategory">Entertainment</a>
-                            <a href="index.html" class="popularCategory">Clothing</a>
-                            <a href="index.html" class="popularCategory">Printing</a>
+                            <a href="index.html" className="popularCategory">Food</a>
+                            <a href="index.html" className="popularCategory">Entertainment</a>
+                            <a href="index.html" className="popularCategory">Clothing</a>
+                            <a href="index.html" className="popularCategory">Printing</a>
                         </div>
                     </div>
 
