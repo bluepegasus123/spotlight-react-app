@@ -37,7 +37,9 @@ function BusinessSubmission(props) {
             id="dummyframe"
             style={{ display: 'none' }}
           />
-          <img class = "whiteLogo" src = {logoWhite} alt = {logoWhite} />
+          <a href ="/">
+            <img class = "whiteLogo" src = {logoWhite} alt = {logoWhite}/>
+          </a>
             <h1>Submit your small business information!</h1>
             <form id = "form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScsGod_4mWSR2eswCAUxXvKnl5BHNjgV4Tf5ygCy6VErrz-3w/formResponse" target="dummyframe">
                 <label class = "inputLabel">
