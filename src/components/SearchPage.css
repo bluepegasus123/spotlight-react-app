@@ -125,6 +125,10 @@
     height: 11.9vh;
 }
 
+.searchResult:enabled {
+    border: 1px solid #f7b500;
+}
+
 .business-title {
     margin: 0;
     /*width: 100%;*/

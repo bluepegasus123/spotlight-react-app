@@ -118,7 +118,7 @@ class SearchPage extends Component {
                             items: result,
                             selectedBusiness: result[0],
                             // if search key rendered no results, show all businesses. If user jumps to search page, searchKey empty string
-                            searchKey: this.props.location.state?.state?.searchKey ? `Sorry, no businesses found for ${this.props.location.state?.state?.searchKey}, here are all the businesses` : '',
+                            searchKey: this.props.location.state?.bus_data?.length === 0 ? `Sorry, no businesses found for "${this.props.location.state?.search_key}", here are all the businesses` : '',
                         });
                     },
                     // Note: it's important to handle errors here

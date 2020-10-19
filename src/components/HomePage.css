@@ -226,18 +226,6 @@ header {
     color: #ffffff;
 }
 
-#popular a {
-    padding: 0 0 0 34px;
-    font-family: 'Open Sans';
-    font-size: 13px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.23;
-    letter-spacing: normal;
-    color: #ffffff;
-}
-
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
     float: left;
@@ -865,9 +853,33 @@ input, select, textarea {
 }
 
 .popularCategory {
+    color: #ffffff;
     text-decoration: none;
-    padding-right: 30px;
-    font-weight: lighter;
+    padding: 0 0 0 34px;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.p-in {
+    outline: none;
+    border: none;
+}
+
+.p-in:active {
+    outline: none;
+    border: none;
 }
 
 .nd-BG {

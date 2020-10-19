@@ -16,12 +16,13 @@ import search from "./pictures/search.png"
 import location from "./pictures/location_pin.png"
 import {Link} from 'react-router-dom';
 
+const tags = new Set();
 class HomePage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             keyword: "",
-            tags: [],
+            // tags: [],
             data: []
         }
         this.searchBarChangeHandler = this.searchBarChangeHandler.bind(this);
@@ -37,10 +38,13 @@ class HomePage extends React.Component {
     }
 
     onClickHandler() {
-        fetch("http://localhost:8080/businesses/getAllBusinesses")
+        let tagParams = Array.from(tags).toString();
+        let searchKeyParam = this.state.keyword;
+        fetch(`http://localhost:8080/businesses/searchBusinesses?searchKey=${searchKeyParam}&tags=${tagParams}`)
             .then(response => response.json())
             .then(result => this.setState({data: result}, () => {
                 console.log(this.state.data)
+                console.log(JSON.stringify(Array.from(tags)));
                 this.props.history.push(
                     {
                         pathname: "/search",
@@ -55,6 +59,14 @@ class HomePage extends React.Component {
     handleKeyPress = (event) => {
         if(event.key === 'Enter'){
             return this.onClickHandler();
+        }
+    }
+
+    toggleTag = (event, tag) => {
+        if (event.target.checked) {
+            tags.add(tag);
+        } else {
+            tags.delete(tag);
         }
     }
 
@@ -81,10 +93,34 @@ class HomePage extends React.Component {
                             </div>
                             <div id="popular">
                                 <p>Popular Categories:</p>
-                                <a href="/" className="popularCategory">Food</a>
-                                <a href="/" className="popularCategory">Entertainment</a>
-                                <a href="/" className="popularCategory">Clothing</a>
-                                <a href="/" className="popularCategory">Printing</a>
+                                <p className="popularCategory">
+                                    <input className="p-in" type="checkbox" onClick={(event) =>this.toggleTag(event, "Food")}/>
+                                    Food
+                                </p>
+                                <p className="popularCategory">
+                                    <input className="p-in" type="checkbox" onClick={(event) =>this.toggleTag(event, "Entertainment")}/>
+                                    Entertainment
+                                </p>
+                                <p className="popularCategory">
+                                    <input className="p-in" type="checkbox" onClick={(event) =>this.toggleTag(event, "Clothing")}/>
+                                    Clothing
+                                </p>
+                                <p className="popularCategory">
+                                    <input className="p-in" type="checkbox" onClick={(event) =>this.toggleTag(event, "Printing")}/>
+                                    Printing
+                                </p>
+                                <p className="popularCategory">
+                                    <input className="p-in" type="checkbox" onClick={(event) =>this.toggleTag(event, "Lifestyle")}/>
+                                    Lifestyle
+                                </p>
+                                {/*<input type="checkbox" className="popularCategory">Entertainment</input>*/}
+                                {/*<input type="checkbox" className="popularCategory">Clothing</input>*/}
+                                {/*<input type="checkbox" className="popularCategory">Printing</input>*/}
+                                {/*<input type="checkbox" className="popularCategory">Lifestyle</input>*/}
+                                {/*<a href="/" className="popularCategory">Food</a>*/}
+                                {/*<a href="/" className="popularCategory">Entertainment</a>*/}
+                                {/*<a href="/" className="popularCategory">Clothing</a>*/}
+                                {/*<a href="/" className="popularCategory">Printing</a>*/}
                             </div>
                         </div>
                         <div className='right-tag'>
