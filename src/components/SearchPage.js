@@ -109,7 +109,7 @@ class SearchPage extends Component {
                 isLoaded: true,
             })
         } else {
-            fetch("http://localhost:8080//businesses/getAllBusinesses")
+            fetch("http://localhost:8080/businesses/getAllBusinesses")
                 .then(res => res.json())
                 .then(
                     (result) => {
